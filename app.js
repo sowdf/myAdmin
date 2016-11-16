@@ -5,9 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var trello = require('./routes/trello');
-
-var index = require('./routes/index');
-var users = require('./routes/users');
+var home = require('./routes/home');
 
 var app = express();
 
@@ -24,6 +22,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+home(app);
 trello(app);
 
 app.listen(app.get('port'),function(err){
