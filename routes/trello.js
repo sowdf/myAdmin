@@ -1,5 +1,7 @@
+var trello = require('../servers/trello');
+
+
+
 module.exports = function(app){
-    app.get('/',function(req,res){
-        res.render('index',{title:123});
-    });
+    app.get('/getCards',trello.getCards);
 }
