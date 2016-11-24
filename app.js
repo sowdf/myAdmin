@@ -7,6 +7,8 @@ var bodyParser = require('body-parser');
 var trello = require('./routes/trello');
 var home = require('./routes/home');
 
+require('./modules/register');
+
 var app = express();
 
 // view engine setup
