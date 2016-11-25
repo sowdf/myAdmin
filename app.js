@@ -7,14 +7,14 @@ var bodyParser = require('body-parser');
 var trello = require('./routes/trello');
 var home = require('./routes/home');
 
-require('./modules/register');
 
 var app = express();
 
 // view engine setup
 app.set('port',process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+app.set('view engine', 'html');
+app.engine('html', require('ejs').renderFile);
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
