@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "build_todo": "webpack-dev-server --port 4000 --hot --inline --config webpack.todo.config.js",
-    "start_todo": "webpack --config webpack.todo.config.js"
+    "build_todo": "webpack-dev-server --port 4000 --hot --inline --config webpack.app.config.js",
+    "start_todo": "webpack --config webpack.app.config.js"
   },
   "dependencies": {
     "body-parser": "~1.15.2",
@@ -25,9 +25,13 @@
     "babel-loader": "^6.2.4",
     "babel-preset-es2015": "^6.6.0",
     "babel-preset-stage-1": "^6.5.0",
+    "bootstrap": "^3.3.7",
+    "crypto": "^0.0.3",
     "css-loader": "^0.23.1",
+    "expose-loader": "^0.7.1",
     "file-loader": "^0.8.5",
-    "html-webpack-plugin": "^2.14.0",
+    "html-webpack-plugin": "^2.24.1",
+    "jquery": "^2.1.4",
     "less-loader": "^2.2.3",
     "mysql": "^2.12.0",
     "react-hot-loader": "^1.3.0",

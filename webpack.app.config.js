@@ -2,14 +2,18 @@ var htmlWebpackPlugin = require('html-webpack-plugin');
 var path = require("path");
 module.exports = {
 	entry:{
-		build:"./todo/index.jsx"
+		register  :"./public/react/register.jsx"
 	},
 	output:{
-		path:"./todo_build/",
+		path:"./public/dist/",
 		filename:"[name].js"
 	},
 	module:{
 		loaders:[
+            {
+                test: require.resolve('jquery'),
+                loader: 'expose?jQuery!expose?$'
+            },
 			{
 				test:/.css$/,
 				loaders:["style","css"],
@@ -19,16 +23,21 @@ module.exports = {
 				test:/.jsx?$/,
 				loaders:['react-hot','babel?presets[]=es2015&presets[]=react'],
 				exclude:"/node_modules/",
-				include:path.resolve(__dirname,"todo")
+				include:path.resolve(__dirname,"public")
 			},
 			{
-				test: /\.(png|jpg)$/,
-				loader: 'url-loader?limit=8192&name=images/[name].[ext]'
+				test:/\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/,
+				loader: 'url-loader?&name=images/[name].[ext]'
 			}
 		]
 	},
 	devServer:{
-
+		proxy: {
+			'/api/*': {
+				target: 'http://localhost:3000',
+				secure: false
+			}
+		}
 	},
 	resolve:{
 		extensions:['','.js',".css",'.jsx']  //自动补全识别后缀
@@ -36,7 +45,7 @@ module.exports = {
 	plugins:[
 		new htmlWebpackPlugin({
 			title:"欢迎",
-			chunks:["build"]
+			chunks:["register"]
 		})
 	]
 }

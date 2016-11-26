@@ -765,7 +765,7 @@ Markdown.dialects.Gruber.inline = {
                   this,
                   text.substr( m.index ), m, previous_nodes || [] );
       }
-      // Default for now to make dev easier. just slurp special and output it.
+      // Default for now to make react easier. just slurp special and output it.
       res = res || [ m[2].length, m[2] ];
       return res;
     },

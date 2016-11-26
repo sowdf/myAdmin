@@ -5,7 +5,7 @@
 /**
  * @summary     DataTables
  * @description Paginate, search and order HTML tables
- * @version     1.10.0-dev
+ * @version     1.10.0-react
  * @file        jquery.dataTables.js
  * @author      SpryMedia Ltd (www.sprymedia.co.uk)
  * @contact     www.sprymedia.co.uk/contact
@@ -4724,7 +4724,7 @@
 	/**
 	 * Extend objects - very similar to jQuery.extend, but deep copy objects, and
 	 * shallow copy arrays. The reason we need to do this, is that we don't want to
-	 * deep copy array init values (such as aaSorting) since the dev wouldn't be
+	 * deep copy array init values (such as aaSorting) since the react wouldn't be
 	 * able to override them, but we do want to deep copy arrays.
 	 *  @param {object} out Object to extend
 	 *  @param {object} extender Object from which the properties will be applied to
@@ -7385,7 +7385,7 @@
 
 			// Short cut - selector is a number and no options provided (default is
 			// all records, so no need to check if the index is in there, since it
-			// must be - dev error if the index doesn't exist).
+			// must be - react error if the index doesn't exist).
 			if ( selInt !== null && ! opts ) {
 				return [ selInt ];
 			}
@@ -8587,13 +8587,13 @@
 
 	/**
 	 * Version string for plug-ins to check compatibility. Allowed format is
-	 * `a.b.c-d` where: a:int, b:int, c:int, d:string(dev|beta|alpha). `d` is used
+	 * `a.b.c-d` where: a:int, b:int, c:int, d:string(react|beta|alpha). `d` is used
 	 * only for non-release builds. See http://semver.org/ for more information.
 	 *  @member
 	 *  @type string
 	 *  @default Version number
 	 */
-	DataTable.version = "1.10.0-dev";
+	DataTable.version = "1.10.0-react";
 
 	/**
 	 * Private data store, containing all of the settings objects that are

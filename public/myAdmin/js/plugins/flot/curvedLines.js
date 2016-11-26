@@ -30,7 +30,7 @@
  ____________________________________________________
 
  curvedLines is a plugin for flot, that tries to display lines in a smoother way.
- The plugin is based on nergal.dev's work https://code.google.com/p/flot/issues/detail?id=226
+ The plugin is based on nergal.react's work https://code.google.com/p/flot/issues/detail?id=226
  and further extended with a mode that forces the min/max points of the curves to be on the
  points. Both modes are achieved through adding of more data points
  => 1) with large data sets you may get trouble
@@ -156,7 +156,7 @@
         }
 
         //no real idea whats going on here code mainly from https://code.google.com/p/flot/issues/detail?id=226
-        //if fit option is selected additional datapoints get inserted before the curve calculations in nergal.dev s code.
+        //if fit option is selected additional datapoints get inserted before the curve calculations in nergal.react s code.
         function calculateCurvePoints(datapoints, curvedLinesOptions, yPos) {
 
             var points = datapoints.points, ps = datapoints.pointsize;
