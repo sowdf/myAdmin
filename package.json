@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "build_todo": "webpack-dev-server --port 4000 --hot --inline --config webpack.app.config.js",
-    "start_todo": "webpack --config webpack.app.config.js"
+    "build_app": "webpack-dev-server --port 4000 --hot --inline --config webpack.app.config.js --content-base public/dist",
+    "start_app": "webpack --config webpack.app.config.js"
   },
   "dependencies": {
     "body-parser": "~1.15.2",

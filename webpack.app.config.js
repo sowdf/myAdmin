@@ -2,7 +2,8 @@ var htmlWebpackPlugin = require('html-webpack-plugin');
 var path = require("path");
 module.exports = {
 	entry:{
-		register  :"./public/react/register.jsx"
+		register  :"./public/react/register.jsx",
+        login  :"./public/react/login.jsx"
 	},
 	output:{
 		path:"./public/dist/",
@@ -44,8 +45,14 @@ module.exports = {
 	},
 	plugins:[
 		new htmlWebpackPlugin({
+            filename : 'register.html',
 			title:"欢迎",
 			chunks:["register"]
-		})
+		}),
+        new htmlWebpackPlugin({
+        	filename : 'login.html',
+            title:"欢迎",
+            chunks:["login"]
+        })
 	]
 }

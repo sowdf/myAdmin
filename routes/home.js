@@ -1,4 +1,5 @@
 var register = require('../servers/register');
+var login = require('../servers/login');
 
 module.exports = function(app){
     app.get('/',function(req,res){
@@ -11,5 +12,12 @@ module.exports = function(app){
     /* 注册 */
     app.get('/register',register.get);
 
-    app.get('/register-save',register.save);
+    app.post('/api/register-save',register.save);
+
+    /* 登陆 */
+
+    app.get('/login',login.get);
+
+    app.post('/api/login-post',login.psot);
+
 }
