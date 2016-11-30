@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "build_app": "webpack-dev-server --port 4000 --hot --inline --config webpack.app.config.js --content-base public/dist",
+    "build_app": "webpack-dev-server --port 4000 --hot --host 0.0.0.0 --inline --config webpack.app.config.js --content-base public/dist",
     "start_app": "webpack --config webpack.app.config.js"
   },
   "dependencies": {
@@ -29,6 +29,8 @@
     "crypto": "^0.0.3",
     "css-loader": "^0.23.1",
     "expose-loader": "^0.7.1",
+    "express-mysql-session": "^1.2.0",
+    "express-session": "^1.14.2",
     "file-loader": "^0.8.5",
     "html-webpack-plugin": "^2.24.1",
     "jquery": "^2.1.4",

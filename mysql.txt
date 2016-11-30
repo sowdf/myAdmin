@@ -14,3 +14,18 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 查找表里面是否有这个数据
 SELECT * FROM users WHERE find_in_set('aa@email.com', emails);
+
+
+
+CREATE TABLE IF NOT EXISTS `dede_addonarticle` (
+  `aid` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `typeid` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `body` mediumtext,
+  `redirecturl` varchar(255) NOT NULL DEFAULT '',
+  `templet` varchar(30) NOT NULL DEFAULT '',
+  `userip` char(15) NOT NULL DEFAULT '',
+  PRIMARY KEY (`aid`),
+  KEY `typeid` (`typeid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+

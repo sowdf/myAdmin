@@ -8,3 +8,4 @@ module.exports.queryUserInfo = function(email,callback){
         mySql.end();
     });
 };
+

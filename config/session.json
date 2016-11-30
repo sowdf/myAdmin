@@ -1,0 +1,18 @@
+{
+  "host" : "localhost",
+  "user" : "root",
+  "password" : "a2153218",
+  "database" : "myadmin",
+  "checkExpirationInterval" : 900000,
+  "expiration" : 86400000,
+  "createDatabaseTable" : true,
+  "connectionLimit" : 1,
+  "schema" : {
+    "tableName": "sessions",
+    "columnNames": {
+      "session_id": "session_id",
+      "expires": "expires",
+      "data": "data"
+    }
+  }
+}

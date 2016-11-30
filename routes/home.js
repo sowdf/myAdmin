@@ -15,9 +15,14 @@ module.exports = function(app){
     app.post('/api/register-save',register.save);
 
     /* 登陆 */
-
+    app.get('/login',login.checkNotLogin);
     app.get('/login',login.get);
 
+    app.get('/login',login.checkNotLogin);
     app.post('/api/login-post',login.psot);
 
-}
+    /* 登出 */
+    app.get('/logout',login.logout);
+
+
+};
